@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Movie Searcher App</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+				
+	</head>
+	<body>
+		
+		
+<div class="container">
+	<div class="row">
+	<h1 style="text-align:center; margin-top:80px;">Results Page!! </h1>		
+		<div style="width: 60%; margin: 25px auto;">
+			<div class="form-group">
+				<div class="thumbnail">
+				<% if (data == null) { %>
+				<p>No results. Please try refining your search terms.</p>
+				<% } else { %>
+				<ul>
+				<% data["Search"].forEach(function(movie){ %>
+							<li>
+								<strong>
+								<%= movie["Title"]%>
+								</strong>
+								- <%= movie["Year"] %>
+							</li>
+					<% }); %>	
+				</ul>
+				<% }; %>	
+	
+				</div>		
+			</div>
+			<div class="form-group">
+			<a href="/" class="btn btn-primary btn-block">Search Again</a>				
+			</div>
+	</div>	
+</div>
+</body>
+</html>
+	  
+
+
+	
+
+
+
